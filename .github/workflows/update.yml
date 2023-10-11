@@ -11,8 +11,6 @@ jobs:
    steps:
      - name: Checkout code
        uses: actions/checkout@v3
-       with:
-        repo-token: ${{ secrets.GITHUB_TOKEN }}      
      - name: Set up Python 
        uses: actions/setup-python@v4
      - name: Run Python Script
