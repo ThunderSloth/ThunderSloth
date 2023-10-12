@@ -9,7 +9,7 @@ class Lichess():
     def __init__(self, username='elib', time_format='blitz'):
         self._username = username
         self._time_format = time_format
-        self._unknown = '????'
+        self._unknown = '%3F'*4 # encoding for 4 question marks "????" 
     @property
     def username(self):
         return self._username
