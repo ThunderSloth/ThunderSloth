@@ -3,33 +3,29 @@
 # 2023-10-10
 
 import requests
-import json
 import os
 
 class Lichess():
     def __init__(self, username='elib', time_format='blitz'):
-        self.username = username
-        self.time_format = time_format
-        self._rating = '????'
+        self._username = username
+        self._time_format = time_format
+        self._unknown = '????'
     @property
     def username(self):
-        return self.username
+        return self._username
     @property
     def time_format(self):
-        return self.time_format
+        return self._time_format
     @property
     def rating(self):
-        return self._rating
-    @rating.setter
-    def rating(self):
         try:
-            api_key =  os.environ['LICHESS_API_KEY']
-            endpoint = "https://lichess.org/api/user/"
+            api_key = os.environ['LICHESS_API_KEY']
+            endpoint = f"https://lichess.org/api/user/{self._username}"
             headers = {"Authorization": f"Bearer {api_key}"}
-            response = requests.get(f"{endpoint}{USER}", headers=headers)
-            assert(response.status_code == 200) # check id successful 
+            response = requests.get(endpoint, headers=headers)
+            assert response.status_code == 200  # check if the request was successful
             data = response.json()
             perfs = data.get("perfs", {})
-            self._rating = perfs[FORMAT]['rating'] # extract rating for specified time-format
-        except:
-            pass
+            return perfs.get(self._time_format, {}).get("rating", self._unknown)  # extract rating for the specified time format
+        except Exception as e:
+            return self._unknown # return a default value in case of an error
