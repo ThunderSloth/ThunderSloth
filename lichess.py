@@ -12,10 +12,10 @@ class Lichess():
         self.time_format = time_format
         self._rating = '????'
     @property
-    def username:
+    def username(self):
         return self.username
     @property
-    def time_format:
+    def time_format(self):
         return self.time_format
     @property
     def rating(self):
