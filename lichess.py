@@ -28,8 +28,8 @@ class Lichess():
             headers = {"Authorization": f"Bearer {api_key}"}
             response = requests.get(f"{endpoint}{USER}", headers=headers)
             assert(response.status_code == 200) # check id successful 
-        except:
-            pass
             data = response.json()
             perfs = data.get("perfs", {})
             self._rating = perfs[FORMAT]['rating'] # extract rating for specified time-format
+        except:
+            pass
