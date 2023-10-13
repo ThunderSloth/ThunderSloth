@@ -23,6 +23,9 @@ jobs:
    - name: Run Python Script
      env:
       LICHESS_API_KEY: ${{ secrets.LICHESS_API_KEY }}
+   - name: Debug Secret Value
+     run: |
+       echo "LICHESS_API_KEY: ${{ secrets.LICHESS_API_KEY }}"
      run: python update.py
    - name: Update README
      run: python update.py > README.md
