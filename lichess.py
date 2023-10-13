@@ -20,7 +20,7 @@ class Lichess():
     def rating(self):
         try:
             api_key = api_key = str(os.environ.get('LICHESS_API_KEY'))
-            print(LICHESS_API_KEY)
+            print(api_key)
             endpoint = f"https://lichess.org/api/user/{self._username}"
             headers = {"Authorization": f"Bearer {api_key}"}
             print(f"{headers}")
