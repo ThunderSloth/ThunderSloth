@@ -9,15 +9,10 @@ class Lichess():
     def __init__(self, username='elib', time_format='blitz'):
         self._username = username
         self._time_format = time_format
-        self._unknown = '%3F'*4 # encoding for 4 question marks "????" 
-    @property
-    def username(self):
-        return self._username
-    @property
-    def time_format(self):
-        return self._time_format
-    @property
+        self._rating = self.rating()
+        self._shield = self.shield()
     def rating(self):
+        unknown = '%3F'*4 # encoding for 4 question marks "????" 
         try:
             api_key = os.environ['LICHESS_API_KEY']
             endpoint = f"https://lichess.org/api/user/{self._username}"
@@ -26,9 +21,13 @@ class Lichess():
             assert response.status_code == 200  # check if the request was successful
             data = response.json()
             perfs = data.get("perfs", {})
-            return perfs.get(self._time_format, {}).get("rating", self._unknown)  # extract rating for the specified time format
+            return perfs.get(self._time_format, {}).get("rating", unknown)  # extract rating for the specified time format
         except Exception as e:
-            return self._unknown # return a default value in case of an error
-    @property
+            return unknown # return a default value in case of an error
     def shield(self):
-       return "https://img.shields.io/badge/-{}%3A%20{}-gray?style=plastic&logo=lichess&label={}&labelColor=black&color=gray".format(lichess_stats.time_format, lichess_stats.rating, lichess_stats.username)
+       return "https://img.shields.io/badge/-{}%3A%20{}-gray?style=plastic&logo=lichess&label={}&labelColor=black&color=gray".format(self._format, self._rating, self_.username)
+    def __repr__(self):
+        return ("Lichess(self._'{self._username}', '{self._time_format')")
+    def __str__(self):
+        return self._shield
+           

@@ -7,9 +7,11 @@ class Badge():
     def __init__(self, name, url):
         self._name = name
         self._url = url
-        self._markdown = f"![{name.upper()}]({url})"
-    @property
     def markdown(self):
         return self._markdown
-
-print(Badge("lichess", lc.shield).markdown)
+    def __repr__(self):
+        return f"Badge('{self._name}', '{self._url}')"
+    def __str__(self):
+        return f"![{name.upper()}]({url})"
+           
+print(Badge("lichess", lc))
