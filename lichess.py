@@ -19,11 +19,9 @@ class Lichess():
     @property
     def rating(self):
         try:
-            api_key = api_key = str(os.environ.get('LICHESS_API_KEY'))
-            print(api_key)
+            api_key = os.environ['LICHESS_API_KEY']
             endpoint = f"https://lichess.org/api/user/{self._username}"
             headers = {"Authorization": f"Bearer {api_key}"}
-            print(f"{headers}")
             response = requests.get(endpoint, headers=headers)
             assert response.status_code == 200  # check if the request was successful
             data = response.json()
