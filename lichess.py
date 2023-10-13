@@ -22,7 +22,7 @@ class Lichess():
             api_key = os.environ.get('LICHESS_API_KEY')
             endpoint = f"https://lichess.org/api/user/{self._username}"
             headers = {"Authorization": f"Bearer {api_key}"}
-            print(header)
+            print(headers)
             response = requests.get(endpoint, headers=headers)
             assert response.status_code == 200  # check if the request was successful
             data = response.json()
