@@ -12,6 +12,6 @@ class Badge():
     def __repr__(self):
         return f"Badge('{self._name}', '{self._url}')"
     def __str__(self):
-        return f"![{self._name.upper()}]({url})"
+        return f"![{self._name.upper()}]({self._url})"
            
 print(Badge("lichess", lc))
