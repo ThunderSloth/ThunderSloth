@@ -30,3 +30,6 @@ class Lichess():
         except Exception as e:
             print(e)
             return self._unknown # return a default value in case of an error
+    @property
+    def shield(self):
+       return "https://img.shields.io/badge/-{}%3A%20{}-gray?style=plastic&logo=lichess&label={}&labelColor=black&color=gray".format(lichess_stats.time_format, lichess_stats.rating, lichess_stats.username)

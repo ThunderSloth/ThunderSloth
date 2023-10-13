@@ -2,6 +2,14 @@
 # Eli Bell
 # 2023-10-11
 import lichess
-lichess_stats = lichess.Lichess()
-lichess_badge = "![LICHESS BADGE](https://img.shields.io/badge/-{}%3A%20{}-gray?style=plastic&logo=lichess&label={}&labelColor=black&color=gray)".format(lichess_stats.time_format, lichess_stats.rating, lichess_stats.username)
-print(lichess_badge)
+
+class Badge():
+    def __init__(self, name, url):
+        self._name = name
+        self._url = url
+        self._badge = f"![{name.upper()}]({url})"
+    @property
+    def badge(self):
+        return self._badge
+
+print(Badge("lichess", Lichess.shield).badge)
