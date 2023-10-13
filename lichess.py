@@ -33,7 +33,7 @@ class Lichess():
             perfs = data.get("perfs", {})
             return perfs.get(self._time_format, {}).get("rating", unknown)  # extract rating for the specified time format
         except Exception as e:
-            print(e)
+            #print(e)
             return unknown # return a default value in case of an error
     def shield(self):
         return "https://img.shields.io/badge/-{}%3A%20{}-gray?style=plastic&logo=lichess&label={}&labelColor=black&color=gray".format(self._time_format, self._rating, self._username)
