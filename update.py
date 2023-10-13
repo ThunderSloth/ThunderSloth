@@ -10,6 +10,6 @@ class Badge():
         self._markdown = f"![{name.upper()}]({url})"
     @property
     def markdown(self):
-        return self._badge
+        return self._markdown
 
 print(Badge("lichess", lc.shield).markdown)
