@@ -1,7 +1,7 @@
 # This script generates new markdown content for my GitHub profile README
 # Eli Bell
 # 2023-10-11
-import lichess.Lichess as lc
+from lichess import Lichess as lc
 
 class Badge():
     def __init__(self, name, url):
