@@ -20,11 +20,9 @@ jobs:
        python-version: '3.10'
    - name: Install dependencies
      run: pip install requests
-   - name: Run Python Script
+   - name: Update README
      env:
       LICHESS_API_KEY: ${{ secrets.LICHESS_API_KEY }}
-     run: python update.py
-   - name: Update README
      run: python update.py > README.md
    - name: Commit and Push Changes
      env:
