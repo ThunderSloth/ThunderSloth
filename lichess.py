@@ -28,4 +28,5 @@ class Lichess():
             perfs = data.get("perfs", {})
             return perfs.get(self._time_format, {}).get("rating", self._unknown)  # extract rating for the specified time format
         except Exception as e:
+            print(e)
             return self._unknown # return a default value in case of an error
