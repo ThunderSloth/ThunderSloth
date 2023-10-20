@@ -1,4 +1,3 @@
-# This script creates a markdown badge using the lichess and shields.io APIs
 # to display my current chess rating
 # Eli Bell
 # 2023-10-10
