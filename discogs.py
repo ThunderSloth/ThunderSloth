@@ -42,7 +42,7 @@ class DC:
             f"{self._username}",
             "black",
             f"${(self._worth/1000):.1f}k",
-            "gray",
+            "#333333",
             "discogs",
         ]
 
