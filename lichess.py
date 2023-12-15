@@ -7,22 +7,22 @@ import requests
 import os
 
 
-class Lichess():
-    def __init__(self, username='elib', time_format='blitz'):
+class LC:
+    def __init__(self, username="elib", time_format="blitz"):
         self._api_key = self.api_key()
         self._username = username
         self._time_format = time_format
         self._rating = self.get_rating()
 
     def api_key(self):
-        key = ''
+        key = ""
         file_path = "lichess_api_key.txt"
         if os.path.exists(file_path):
-            with open(file_path, 'r') as file:
+            with open(file_path, "r") as file:
                 file_contents = file.read()
             key = file_contents.strip()
         else:
-            key = os.environ['LICHESS_API_KEY']
+            key = os.environ["LICHESS_API_KEY"]
         return key
 
     def get_rating(self):
@@ -41,9 +41,10 @@ class Lichess():
 
     @property
     def parameters(self):
-        return [self._username,
-                "black",
-                f"{self._time_format}: {self._rating}",
-                "gray",
-                "lichess",
-                ]
+        return [
+            self._username,
+            "black",
+            f"{self._time_format}: {self._rating}",
+            "gray",
+            "lichess",
+        ]

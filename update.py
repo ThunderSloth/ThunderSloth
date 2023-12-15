@@ -2,13 +2,19 @@
 # Eli Bell
 # 2023-10-11
 
-from shields import Shields
-from lichess import Lichess 
+from shields import shields
+from lichess import LC 
+from monkeytype import MT 
+from discogs import DC
 
 STYLE = "plastic"
 
-shields = [Lichess(username='elib', time_format='blitz'),]
+badges = [
+    LC(),
+    MT(),
+    DC(),
+]
 
-for shield in shields:
-    print(Shields(*shield.parameters, STYLE).badge)
+for badge in badges:
+    print(shields(*badge.parameters, STYLE))
 
