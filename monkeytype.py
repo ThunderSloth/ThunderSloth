@@ -34,9 +34,9 @@ class MT:
             # extract wpm and acc
             wpm = record.get("wpm", 0)
             acc = record.get("acc", 0)
-            return wpm, acc
+            return (wpm, acc)
         except Exception as error:
-            return error
+             return (0, 0)
 
     @property
     def parameters(self):
