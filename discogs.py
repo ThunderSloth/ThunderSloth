@@ -42,7 +42,7 @@ class DC:
             f"{self._username}",
             "#333333",
             f"${(self._worth/1000):.1f}k",
-            "#ffffff",
+            "#000000",
             "discogs",
         ]
 
