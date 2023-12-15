@@ -23,6 +23,8 @@ jobs:
    - name: Update README
      env:
       LICHESS_API_KEY: ${{ secrets.LICHESS_API_KEY }}
+      MONKEYTYPE_API_KEY: ${{ secrets.MONKEYTYPE_API_KEY }}
+      DISCOGS_API_KEY: ${{ secrets.DISCOGS_API_KEY }}
      run: python update.py > README.md
    - name: Commit and Push Changes
      env:
