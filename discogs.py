@@ -45,5 +45,6 @@ class DC:
             "D3D3D3",
             "discogs",
             "white",
+            "https://www.discogs.com/user/" + self._username
         ]
 

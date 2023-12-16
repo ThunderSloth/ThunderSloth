@@ -5,7 +5,7 @@
 from urllib.parse import urlencode, quote
 
 
-def shields(text1, color1, text2, color2, logo, logoColor, style):
+def shields(text1, color1, text2, color2, logo, logoColor, link, style):
     args = {}
     args["title"] = logo.upper()
     args["base_url"] = "https://img.shields.io/badge/"
@@ -25,4 +25,4 @@ def shields(text1, color1, text2, color2, logo, logoColor, style):
         args.get("base_url") + args.get("message") + args.get("query_string")
     )
 
-    return "![{}]({})".format(args.get("title"), args.get("full_url"))
+    return "[![{}]({})]({})".format(args.get("title"), args.get("full_url"), args.get("link"))

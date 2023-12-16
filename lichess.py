@@ -45,7 +45,8 @@ class LC:
             "lichess",
             "black",
             f"{self._time_format}: {self._rating}",
-            "gray",
+            "D3D3D3",
             "lichess",
             "white",
+            "https://lichess.org/@/" + self._username,
         ]

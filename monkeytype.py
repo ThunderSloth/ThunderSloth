@@ -47,6 +47,7 @@ class MT:
             "black",
             "monkeytype",
             "black"
+            "https://monkeytype.com/account",
         ]
 
 
