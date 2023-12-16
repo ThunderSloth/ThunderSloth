@@ -46,7 +46,7 @@ class MT:
             f"{self._wpm:.0f} WPM",
             "black",
             "monkeytype",
-            "black"
+            "black",
             "https://monkeytype.com/account",
         ]
 
