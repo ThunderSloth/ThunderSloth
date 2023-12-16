@@ -5,21 +5,24 @@
 from urllib.parse import urlencode, quote
 
 
-def shields (text1, color1, text2, color2, logo, style):
-    args = {} 
+def shields(text1, color1, text2, color2, logo, style):
+    args = {}
     args["title"] = logo.upper()
     args["base_url"] = "https://img.shields.io/badge/"
     args["message"] = quote("-".join(["", text2, color1])) + "?"
     args["query_params"] = {
         "style": style,
         "logo": logo,
-        "labelColor": "white",
+        "logoColor": "white",
     }
     if text1 and color2:
         args["query_params"]["label"] = text1
         args["query_params"]["color"] = color2
+        args["query_params"]["labelColor"] = color1
 
     args["query_string"] = urlencode(args.get("query_params"))
-    args["full_url"]= args.get("base_url") + args.get("message") + args.get("query_string")
+    args["full_url"] = (
+        args.get("base_url") + args.get("message") + args.get("query_string")
+    )
 
     return "![{}]({})".format(args.get("title"), args.get("full_url"))
