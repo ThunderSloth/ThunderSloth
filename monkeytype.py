@@ -42,9 +42,9 @@ class MT:
     def parameters(self):
         return [
             "",
-            "black",
+            "E2B714",
             f"{self._wpm:.0f} WPM",
-            "black",
+            "E2B714",
             "monkeytype",
         ]
 
