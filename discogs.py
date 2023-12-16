@@ -39,7 +39,7 @@ class DC:
     @property
     def parameters(self):
         return [
-            f"{self._username}",
+            "",
             "black",
             f"${(self._worth/1000):.1f}k",
             "gray",

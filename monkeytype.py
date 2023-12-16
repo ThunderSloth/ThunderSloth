@@ -3,7 +3,7 @@ import os
 
 
 class MT:
-    def __init__(self, username="THUNDER-SLOTH", mode="time", mode2="30"):
+    def __init__(self, username="THUNDER-SLOTH", mode="time", mode2="15"):
         self._api_key = self.api_key()
         self._username = username
         self._mode = mode
@@ -41,7 +41,7 @@ class MT:
     @property
     def parameters(self):
         return [
-            f"{self._mode2}s",
+            "",
             "black",
             f"{self._wpm:.0f} WPM",
             "gray",
