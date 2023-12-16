@@ -18,3 +18,4 @@ badges = [
 for badge in badges:
     print(shields(*badge.parameters, STYLE))
 
+print("![Static Badge](https://img.shields.io/badge/nvim-blue?logo=Neovim&labelColor=black&color=%2357A143)")

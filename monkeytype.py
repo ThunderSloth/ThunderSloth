@@ -43,8 +43,8 @@ class MT:
         return [
             f"{self._mode2}s",
             "black",
-            f"{self._wpm:.0f} WPM: {self._acc:.0f}%",
-            "#E2B714",
+            f"{self._wpm:.0f} WPM",
+            "gray",
             "monkeytype",
         ]
 

@@ -40,9 +40,9 @@ class DC:
     def parameters(self):
         return [
             f"{self._username}",
-            "#333333",
+            "black",
             f"${(self._worth/1000):.1f}k",
-            "#000000",
+            "gray",
             "discogs",
         ]
 
