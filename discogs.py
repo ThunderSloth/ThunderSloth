@@ -42,7 +42,7 @@ class DC:
             "discogs",
             "333333",
             f"${(self._worth/1000):.1f}k",
-            "black",
+            "D3D3D3",
             "discogs",
             "white",
         ]
