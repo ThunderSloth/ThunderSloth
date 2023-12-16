@@ -44,7 +44,7 @@ class MT:
             "",
             "black",
             f"{self._wpm:.0f} WPM",
-            "gray",
+            "black",
             "monkeytype",
         ]
 
