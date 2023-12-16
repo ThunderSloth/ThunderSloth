@@ -40,9 +40,9 @@ class DC:
     def parameters(self):
         return [
             "",
-            "black",
+            "333333",
             f"${(self._worth/1000):.1f}k",
-            "gray",
+            "333333",
             "discogs",
         ]
 
