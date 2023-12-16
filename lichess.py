@@ -43,7 +43,7 @@ class LC:
     def parameters(self):
         return [
             "lichess",
-            "black",
+            "333333",
             f"{self._time_format}: {self._rating}",
             "D3D3D3",
             "lichess",
