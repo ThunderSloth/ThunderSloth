@@ -25,4 +25,4 @@ def shields(text1, color1, text2, color2, logo, logoColor, link, style):
         args.get("base_url") + args.get("message") + args.get("query_string")
     )
 
-    return "[![{}]({})]({})".format(args.get("title"), args.get("full_url"), args.get("link"))
+    return "[![{}]({})]({})".format(args.get("title"), args.get("full_url"), link)
