@@ -13,10 +13,12 @@ def shields (text1, color1, text2, color2, logo, style):
     args["query_params"] = {
         "style": style,
         "logo": logo,
-        "label": text1,
-        "labelColor": color1,
-        "color": color2,
+        "labelColor": "white",
     }
+    if text1 and color2:
+        args["query_params"]["label"] = text1
+        args["query_params"]["color"] = color2
+
     args["query_string"] = urlencode(args.get("query_params"))
     args["full_url"]= args.get("base_url") + args.get("message") + args.get("query_string")
 

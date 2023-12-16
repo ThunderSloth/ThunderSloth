@@ -44,7 +44,7 @@ class MT:
             "",
             "E2B714",
             f"{self._wpm:.0f} WPM",
-            "E2B714",
+            "",
             "monkeytype",
         ]
 
