@@ -7,5 +7,5 @@
 ![nvim](https://img.shields.io/badge/NeoVim-%2357A143.svg?&style=for-the-badge&logo=neovim&logoColor=white)
 ![wezterm](https://img.shields.io/badge/WezTerm-4E49EE.svg?style=for-the-badge&logo=WezTerm&logoColor=white)![ai](https://img.shields.io/badge/Adobe%20Illustrator-FF9A00.svg?style=for-the-badge&logo=Adobe-Illustrator&logoColor=white)
 ![LICHESS](https://img.shields.io/badge/-blitz%3A%202048-black?style=for-the-badge&logo=lichess&label=elib&labelColor=black&color=gray)
-![MONKEYTYPE](https://img.shields.io/badge/-59%20WPM-black?style=for-the-badge&logo=monkeytype&label=&labelColor=black&color=gray)
-![DISCOGS](https://img.shields.io/badge/-%241.1k-black?style=for-the-badge&logo=discogs&label=&labelColor=black&color=gray)
+![MONKEYTYPE](https://img.shields.io/badge/-0%20WPM-black?style=for-the-badge&logo=monkeytype&label=&labelColor=black&color=black)
+![DISCOGS](https://img.shields.io/badge/-%241.1k-333333?style=for-the-badge&logo=discogs&label=&labelColor=333333&color=333333)
