@@ -39,10 +39,11 @@ class DC:
     @property
     def parameters(self):
         return [
-            "",
+            "discogs",
             "333333",
             f"${(self._worth/1000):.1f}k",
-            "",
+            "black",
             "discogs",
+            "white",
         ]
 

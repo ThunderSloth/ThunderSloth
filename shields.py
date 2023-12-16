@@ -5,7 +5,7 @@
 from urllib.parse import urlencode, quote
 
 
-def shields(text1, color1, text2, color2, logo, style):
+def shields(text1, color1, text2, color2, logo, logoColor, style):
     args = {}
     args["title"] = logo.upper()
     args["base_url"] = "https://img.shields.io/badge/"
@@ -13,7 +13,7 @@ def shields(text1, color1, text2, color2, logo, style):
     args["query_params"] = {
         "style": style,
         "logo": logo,
-        "logoColor": "white",
+        "logoColor": logoColor,
     }
     if text1 and color2:
         args["query_params"]["label"] = text1

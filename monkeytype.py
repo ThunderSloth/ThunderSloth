@@ -41,11 +41,12 @@ class MT:
     @property
     def parameters(self):
         return [
-            "",
+            "monkeytype",
             "E2B714",
             f"{self._wpm:.0f} WPM",
-            "",
+            "black",
             "monkeytype",
+            "black"
         ]
 
 

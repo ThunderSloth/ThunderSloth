@@ -42,9 +42,10 @@ class LC:
     @property
     def parameters(self):
         return [
-            self._username,
+            "lichess",
             "black",
             f"{self._time_format}: {self._rating}",
             "gray",
             "lichess",
+            "white",
         ]
