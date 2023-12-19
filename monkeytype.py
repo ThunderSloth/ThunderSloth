@@ -47,7 +47,7 @@ class MT:
             "black",
             "monkeytype",
             "black",
-            "https://monkeytype.com/account",
+            "https://monkeytype.com/profile/" + self._username,
         ]
 
 
